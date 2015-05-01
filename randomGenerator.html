@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!-- Load c3.css -->
+<head>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+ <script src="lib/c3.min.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+ <link href="css/c3.min.css" rel="stylesheet" type="text/css"></script>
+  <link href="css/randomGenerator.css" rel="stylesheet" type="text/css"></script>
+
+
+
+  <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    Starting Range: <input type = "text" class = "start"/>
+    Ending Range: <input type = "text" class = "end"></input>
+    <button class = "submit">Submit</button>
+    <button class = "stop">Stop</button>
+    <div id="chart"></div>
+
+
+    <script>
+      var points = [];
+      var chart = c3.generate({
+          data: {
+              json: {
+                data1: points
+              }
+          }
+      });
+
+      $(document).ready(function() {
+        var constantInterval;
+        //Buttons
+        $('.submit').on('click', function(){
+          var start = $('.start').val();
+          var end = $('.end').val();
+          createGraph(start, end);
+        });
+        $('.stop').on('click', function(){
+          clearInterval(constantInterval);
+        });
+
+        var randGen = function(start, end){
+          return Math.floor(Math.random() * (parseInt(end) - parseInt(start) + 1) + parseInt(start)); 
+        };
+
+        var createGraph = function(start, end){
+          var counter = 1;
+          var dataStr = '';
+          constantInterval = setInterval(function(){
+            var rand = randGen(start,end);
+            
+            points.push(rand);
+            chart.load({
+              json: {
+                 data1: points
+              }
+            });
+
+          },1000);
+        };
+      });
+    </script>
+</body>
+
+
+</html>
