@@ -1,73 +1,233 @@
+
 <!DOCTYPE html>
-<html>
-<!-- Load c3.css -->
-<head>
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
- <script src="lib/c3.min.js"></script>
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>Henry Wong</title>
+    <meta name="description" content="Software Engineer. Chess. Tennis">
 
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <link href="css/c3.min.css" rel="stylesheet" type="text/css"></script>
-  <link href="css/randomGenerator.css" rel="stylesheet" type="text/css"></script>
-
-
-
-  <!-- jQuery -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-</head>
-<body>
-    Starting Range: <input type = "text" class = "start"/>
-    Ending Range: <input type = "text" class = "end"></input>
-    <button class = "submit">Submit</button>
-    <button class = "stop">Stop</button>
-    <div id="chart"></div>
-
+    <link rel="stylesheet" type="text/css" href="henryPortfolio_files/screen.css">
+    <link href="henryPortfolio_files/css_002.css" rel="stylesheet" type="text/css">
+    <link href="henryPortfolio_files/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="henryPortfolio_files/font-awesome.css">
 
     <script>
-      var points = [];
-      var chart = c3.generate({
-          data: {
-              json: {
-                data1: points
-              }
-          }
-      });
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      $(document).ready(function() {
-        var constantInterval;
-        //Buttons
-        $('.submit').on('click', function(){
-          var start = $('.start').val();
-          var end = $('.end').val();
-          createGraph(start, end);
-        });
-        $('.stop').on('click', function(){
-          clearInterval(constantInterval);
-        });
+      ga('create', 'UA-61664560-1', 'auto');
+      ga('send', 'pageview');
 
-        var randGen = function(start, end){
-          return Math.floor(Math.random() * (parseInt(end) - parseInt(start) + 1) + parseInt(start)); 
-        };
-
-        var createGraph = function(start, end){
-          var counter = 1;
-          var dataStr = '';
-          constantInterval = setInterval(function(){
-            var rand = randGen(start,end);
-            
-            points.push(rand);
-            chart.load({
-              json: {
-                 data1: points
-              }
-            });
-
-          },1000);
-        };
-      });
     </script>
-</body>
 
 
-</html>
+
+</head>
+<body class="home-template">
+
+    
+
+<header id="site-head" style="background-image: url(henryPortfolio_files/maccode.jpg); background-position-y: 51.6153846153846%;">
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+
+            <a id="blog-logo"><img src="henryPortfolio_files/Screen-Shot-2015-04-08-at-4-44-10-PM.png" alt="Blog Logo"></a>
+            <h1 class="blog-title">Henry Wong</h1>
+            <h2 class="blog-description">Software Engineer. Chess. Tennis</h2>
+
+            <a class="btn first">What I do</a>
+            <a class="btn last">Contact Me</a><br>
+           <!--  <i id="header-arrow" class="fa fa-angle-down"></i> -->
+        </div>
+    </div>
+
+</header>
+
+<main class="content" role="main">
+
+    <div style="display: block;" class="fixed-nav">
+        <!-- <a class="fn-item" item_index="1">About Me</a>
+        <a class="fn-item" item_index="2">Projects</a>
+        <a class="fn-item active" item_index="3">Fun Facts</a>
+        <a class="fn-item" item_index="4">Contact Me</a> -->
+    </div>
+
+    <div class="post-holder">
+        
+                <article item_index="1" id="about-me" class="post first">
+        
+            <header class="post-header">
+                
+                <h2 class="post-title">About Me</h2>
+
+            </header>
+            <section class="post-content">
+                <p></p><p>I am a software engineer that builds awesome 
+web and mobile apps. I've been programming for over 3+ years. While 
+working as an analyst in Market Research, I discovered programming when I
+ wrote scripts in Excel VBA to automate my work. This eventually lead me
+ to go back to school and study Computer Science. I recently graduated 
+from Hack Reactor, an immersive programming camp in SF. </p>
+
+<p>Here is a list of technologies I've worked with: Javascript, Node.js,
+ Express, MySQL, MongoDB, AngularJS, Gulp, HTML, jQuery, CSS, Git, 
+Cordova, Ionic, D3.js, Backbone.js, Java, Android, C, Python, Ruby, and 
+PHP.</p>
+
+<p>I am versatile and a quick learner that can get things done!</p><p></p>
+            </section>
+        </article>
+        <div style="border-top-color: rgb(242, 239, 232); display: block;" class="post-after even"></div>
+    </div>
+
+    <div class="post-holder odd">
+        
+                    <article item_index="2" id="projects" class="post">
+        
+            <header class="post-header">
+                
+                <h2 class="post-title">Projects</h2>
+
+            </header>
+            <section class="post-content">
+                <p></p><p><a href="http://thoughtdrop.herokuapp.com/"><u></u></a></p><h5><a href="http://thoughtdrop.herokuapp.com/"><u>Thought Drop</u></a></h5>
+Thought Drop is a mobile app that creates serendipitous message 
+discovery as users go about their day. You can leave a public note, or a
+ private one for your friends! See what people are saying around you, 
+both at the present and in the past!<p></p>
+
+<p>Build app in a team of 4 at Hack Reactor. In charge of maps and front
+ end design. Technologies used: Ionic/Cordova, Angular, MongoDB, and 
+NodeJS/Express</p>
+
+<p><a href="https://github.com/henryw4k/MightyPlayground">Source Code</a>
+<img src="henryPortfolio_files/messageStream-copy-1.png" alt=""></p>
+
+<p><a href="http://vagabondwith.me/"><u></u></a></p><h5><a href="http://vagabondwith.me/"><u>Vagabond</u></a></h5>
+Vagabond is a social map creator that helps people generate custom, 
+interactive maps to share with friends. The intuitive interface provides
+ an easy way to create custom adventures for your viewers and provide 
+your own commentary for each location. You can then share your creations
+ with viewers, who are treated to a beautifully styled map and simple 
+scrolling functionality that seamlessly leads them from place to place.<p></p>
+
+<p>Vagabond is a full stack application written in Javascript and uses MapBox, Google Maps API, Node.js, Express 4.0, and Postgres</p>
+
+<p><a href="https://github.com/henryw4k/CriticalShadow">Source Code</a>
+ <br><br>
+<img src="henryPortfolio_files/Screen-Shot-2015-04-08-at-6-51-32-PM.png" alt="">
+<img src="henryPortfolio_files/Screen-Shot-2015-04-08-at-6-53-29-PM-copy.png" alt="">
+<img src="henryPortfolio_files/Screen-Shot-2015-04-08-at-6-51-44-PM-copy-copy.jpg" alt="">
+<br><br> <br>
+<a href="https://play.google.com/store/apps/details?id=com.asdf.studentproject&amp;hl=en"><u></u></a></p><h5><a href="https://play.google.com/store/apps/details?id=com.asdf.studentproject&amp;hl=en"><u>Ultimate Flashcard Appz</u></a></h5>
+The Ultimate Flashcard app is a polished, basic app that does what a 
+flashcard app is supposed to do: flip cards! Utilizing code from 
+developer.android.com, this code has an animation card flipper that 
+creates a realistic flashcard experiences for the users when they flip 
+back and forth between words and definitions. This app has a built-in 
+database so you can have as many flashcards as you need for your 
+specific purposes. This app also has special built-in feature that 
+allows you to edit your word and definition if you found a mistake in 
+your initial data entry.<p></p>
+
+<p>This app is fully build in native Android(Java). And yes I designed that sexy icon with Photoshop! <br>
+<br> <br>
+<img src="henryPortfolio_files/Untitled-1.png" alt="">
+<img src="henryPortfolio_files/Screen-Shot-2015-04-08-at-7-24-32-PM-copy.png" alt=""></p>
+
+<h5>Client Projects</h5>  
+
+<p>...will update soon</p><p></p>
+            </section>
+        </article>
+        <div style="border-top-color: rgb(0, 153, 204); display: none;" class="post-after"></div>
+    </div>
+
+    <div class="post-holder">
+        
+                    <article item_index="3" id="fun-facts" class="post">
+        
+            <header class="post-header">
+                
+                <h2 class="post-title">Fun Facts</h2>
+
+            </header>
+            <section class="post-content">
+                <p></p><p>I can hit winners for your company if you hire me!</p>
+
+<p>
+    <img crossorigin="anonymous" alt="Screen Recording 2015-04-08 at 05.35 PM.gif" drop-id="2K2k1X3b2w30" src="https://s3.amazonaws.com/f.cl.ly/items/0a2C1z3W1K1r0024273F/Screen%20Recording%202015-04-08%20at%2005.35%20PM.gif" style="max-height: 517px; transform: rotate(0deg); transform-origin: center 50% 0px;">
+
+</p>
+
+<p>I can help your company checkmate the competitors if you hire me!</p>
+
+<p><strong><em>funny video coming soon</em></strong></p><p></p>
+            </section>
+        </article>
+        <div style="border-top-color: rgb(242, 239, 232); display: block;" class="post-after even"></div>
+    </div>
+
+    <div class="post-holder odd">
+        
+                    <article item_index="4" id="contact-me" class="post last">
+        
+            <header class="post-header">
+                
+                <h2 class="post-title">Contact Me</h2>
+
+            </header>
+            <section class="post-content">
+                <p></p><p>The easiest way to reach me is via email at <a href="mailto:henryw4k@gmail.com">henryw4k@gmail.com</a></p>
+
+<ul>
+    <li><a href="https://github.com/henryw4k">Github</a></li>
+    <li><a href="https://linkedin.com/in/henryw4k">Linkedin</a></li>
+    <li><a href="https://angel.co/henryw4k">Angel List</a></li>
+    <li><a href="http://www.uschess.org/msa/MbrDtlMain.php?12936284">USCF Chess Rating</a></li>
+</ul>
+
+<p>
+    <br> <br>
+    <br> <br>
+    <br> <br>
+    <br> <br>
+    <br> <br>
+
+    <object type="application/x-shockwave-flash" data="https://clients4.google.com/voice/embed/webCallButton" width="230" height="85"><param name="movie" value="https://clients4.google.com/voice/embed/webCallButton" /><param name="wmode" value="transparent" /><param name="FlashVars" value="id=352e089e3a2fd176d64a1d423c3e4c678f0ba2ab&style=0" /></object>
+
+</p>
+
+            </section>
+        </article>
+        <div style="border-top-color: rgb(0, 153, 204); display: none;" class="post-after"></div>
+    </div>
+
+
+    
+
+</main>
+
+    <footer class="site-footer">
+        <div class="inner">
+             <section class="poweredby">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+--Martin Fowler</section>
+        </div>
+    </footer>
+
+    <script src="henryPortfolio_files/jquery.js"></script>
+
+    <script type="text/javascript" src="henryPortfolio_files/icons.js"></script>
+    <script type="text/javascript" src="henryPortfolio_files/index.js"></script>
+
+
+
+
+</body></html>

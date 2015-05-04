@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xMmDra0ONnO3FPH--kzkC5zr7w4p9aSvGirXi6XmeXNA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xGAzD5WKQVN4wSyA0MYYi4rr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Condensed Bold'), local('OpenSans-CondensedBold'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xIgEy7irt_A5K-aDq9kG7DHr7w4p9aSvGirXi6XmeXNA.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/gk5FxslNkTTHtojXrkp-xM6Eyu0BCqAfob_z3hhzRFzr7w4p9aSvGirXi6XmeXNA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Cond Light Italic'), local('OpenSans-CondensedLightItalic'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/jIXlqT1WKafUSwj6s9AzVyqWG1TIildrkra2taUxHyR2IY20qb3OO3nusUf_NB58.woff2) format('woff2'), url(http://fonts.gstatic.com/s/opensanscondensed/v10/jIXlqT1WKafUSwj6s9AzV6XnXbwdDC8wAz6IIzmCDUN2IY20qb3OO3nusUf_NB58.woff) format('woff');
+}
