@@ -7,7 +7,7 @@ var $fnav = $('.fixed-nav');
 var $postholder = $('.post-holder');
 var $postafter = $('.post-after');
 var $sitehead = $('#site-head');
-
+var icon = 1;
 /* Globals jQuery, document */
 (function ($) {
 	"use strict";
