@@ -94,28 +94,28 @@ var $sitehead = $('#site-head');
 			});
 		}
 
-		$('ul li').before('<span class="bult fa fa-asterisk icon-asterisk"></span>');
-		$('blockquote p').prepend('<span class="quo icon-quote-left"></span>');
-		$('blockquote p').append('<span class="quo icon-quote-right"></span>');
+		// $('ul li').before('<span class="bult fa fa-asterisk icon-asterisk"></span>');
+		// $('blockquote p').prepend('<span class="quo icon-quote-left"></span>');
+		// $('blockquote p').append('<span class="quo icon-quote-right"></span>');
 	});
 	
-	$post.each(function () {
-		var postText = $(this).html();
-		var fa  = [];
-		for(var i=0; i < icons.length; i++) {
-			fa[i]       = {};
-			fa[i].str   = "@"+ icons[i]+ "@";
-			fa[i].icon  = icons[i];
-			fa[i].int   = postText.search(fa[i].str);
+	// $post.each(function () {
+	// 	var postText = $(this).html();
+	// 	var fa  = [];
+	// 	for(var i=0; i < icons.length; i++) {
+	// 		fa[i]       = {};
+	// 		fa[i].str   = "@"+ icons[i]+ "@";
+	// 		fa[i].icon  = icons[i];
+	// 		fa[i].int   = postText.search(fa[i].str);
 
-			if(fa[i].int > -1 ) { 
-				fa[i].count = postText.match(new RegExp(fa[i].str,"g")).length;
-				for(var j=0; j < fa[i].count; j++) {
-					$(this).html($(this).html().replace(fa[i].str, "<i class='fa "+fa[i].icon+"'></i>"))
-				}
-			}
-		}
-	});
+	// 		if(fa[i].int > -1 ) { 
+	// 			fa[i].count = postText.match(new RegExp(fa[i].str,"g")).length;
+	// 			for(var j=0; j < fa[i].count; j++) {
+	// 				$(this).html($(this).html().replace(fa[i].str, "<i class='fa "+fa[i].icon+"'></i>"))
+	// 			}
+	// 		}
+	// 	}
+	// });
 	
 
 }(jQuery));
